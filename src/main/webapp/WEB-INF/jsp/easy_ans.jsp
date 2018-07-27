@@ -4,7 +4,7 @@
 <%@ page import="java.util.List"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<% Boolean[] Ans = (Boolean[]) session.getAttribute("ans"); %>
+<% String Ans = (String)session.getAttribute("ans"); %>
 
 <html>
 <head>
@@ -17,15 +17,10 @@
 			<td>8</td>
 			<td>4</td>
 			<td>
-			<% if(Ans[0]== true) {%>
-			<font color="BLUE">
-			<% }else{ %>
-			<font color="RED">
-			<%} %>
-			1</font></td>
+			</td>
 			<td bgcolor="#C9E4FF">5</td>
 			<td bgcolor="#C9E4FF">
-			/td>
+			</td>
 			<td bgcolor="#C9E4FF"><input
 				style="margin: 0px; padding: 0px; width: 80%; height: 100%;"
 				type="text" name="a3"></td>

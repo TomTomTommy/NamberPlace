@@ -18,7 +18,7 @@ td {
 </head>
 
 <body>
-	<form action="/easy">
+	<form action="/easy" method="post">
 		<table>
 			<tr>
 				<td>8</td>
@@ -188,7 +188,9 @@ td {
 				<td>5</td>
 			</tr>
 		</table>
-		 <button class ="button" type="submit">➤答える</button>
+
+   
+       <button class ="button" type="submit">➤答える</button>
 	</form>
 </body>
 </html>
