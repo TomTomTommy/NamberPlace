@@ -27,11 +27,13 @@ public class EasyAnswerServlet extends HttpServlet {
 	    
 
 	
-	   String ans = request.getParameter("a1");
+	  
+	  RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/easy_ans.jsp");
+	     Boolean[] ans = new Boolean[30];
 	   
 	    
-	/*	if (request.getParameter("a1").equals("1")) ans= true;
-		else ans = false;
+		if (request.getParameter("a1").equals("1")) ans[0]= true;
+		else ans[0] = false;
 
 		if (request.getParameter("a2").equals("2")) ans[1] = true;
 		else ans[1] = false;
@@ -122,12 +124,12 @@ public class EasyAnswerServlet extends HttpServlet {
 
 		if (request.getParameter("h3").equals("2")) ans[29] = true;
 		else ans[29] = false;
-*/
+
 		HttpSession session = request.getSession();
 		session.setAttribute("answer",ans);
 		
-		RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/jsp/easy_ans.jsp");
-		dis.forward(request, response);
+		//RequestDispatcher dis = request.getRequestDispatcher("/WEB-INF/jsp/easy_ans.jsp");
+		dispatcher.forward(request, response);
 	   // try {
 			
 		//} catch (ServletException e) {
