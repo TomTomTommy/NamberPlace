@@ -13,8 +13,9 @@
 		    urlPatterns = {"/normal"}
 	)
 	
-	public class NormalAnswerServlet {
+	public class NormalAnswerServlet extends HttpServlet{
 		
+		@Override
 		public void doGet(HttpServletRequest request, HttpServletResponse response)
 		      throws IOException {
 
@@ -27,7 +28,7 @@
 			  response.setCharacterEncoding("UTF-8");
 			  
 			  RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/normal_ans.jsp");
-			     Boolean[] Nans = new Boolean[30];
+			     Boolean[] Nans = new Boolean[45];
 			   
 			    
 				if (request.getParameter("a1").equals("5")) Nans[0]= true;
@@ -123,11 +124,11 @@
 				if (request.getParameter("f5").equals("4")) Nans[29] = true;
 				else Nans[29] = false;
 				
-				if (request.getParameter("f6").equals("7")) Nans[30] = true;
+				if (request.getParameter("f6").equals("7")) Nans[30]= true;
 				else Nans[30] = false;
 				
-				if (request.getParameter("f7").equals("2")) Nans[31] = true;
-				else Nans[31] = false;
+				if (request.getParameter("f7").equals("2")) Nans[31 ]= true;
+				else Nans[31]= false;
 				
 				if (request.getParameter("g1").equals("1")) Nans[32] = true;
 				else Nans[32] = false;
